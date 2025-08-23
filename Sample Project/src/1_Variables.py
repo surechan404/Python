@@ -16,7 +16,9 @@ b, c, d = 71, "SC", 3.14159
 print(b, c, d)
 
 # 4. Concat-ing a String
-print("Value of c is "+c)
+print("a) Value of c is",c)
+#or
+print("b) Value of c is"+c)
 
 # 5. Concat-ing Number with String
 # Use .format()
@@ -30,24 +32,3 @@ print(type(b))
 print(type(c))
 print(type(d))
 # Incorrect -> print(type(b,c))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
