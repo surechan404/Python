@@ -114,5 +114,6 @@ list1 = [1, 2, 3, 4, 5]  # []
 tuple1 = (1, 2, 3, 4, 5) # ()
 dict1 = {"one":1, "two":2, "three":3, } # {a:b}
 set1 = {1, 2, 3, 4, 5} # {}
+
 print(type(list1), type(tuple1), type(dict1), type(set1))
 # => <class 'list'> <class 'tuple'> <class 'dict'> <class 'set'>
