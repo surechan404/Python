@@ -38,22 +38,3 @@ print("Even" if x%2==0 else "Odd")
 age = int(input("Enter Age.."))
 print("Eligible to Vote" if age>=18 else "Not eligible to Vote")
 print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

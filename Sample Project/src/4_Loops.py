@@ -19,13 +19,13 @@ print()
 
     # Example 3: Incrementing the range by count 2 Eg. for(int i=0;i<8;i+2)
 counter = 0
-for i in range(1,100,2):
+for i in range(1,100,2):   # 1 to 99, increment by 2
     counter +=1
     print(i)
 print("{} {}".format("Total odd nos until 100 is", counter))
 print(f"Total odd nos until 100 is {counter}")
-    # Example 4: Skipping First index of range()
 
+    # Example 4: Skipping First index of range()
 for j in range(10):
         print(j)  # prints from 0 to 9
 print()
