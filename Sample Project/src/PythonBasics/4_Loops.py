@@ -54,7 +54,7 @@ print("End of while loop..\n")
 for i in range(1,6):
     print(i)
     if i ==4:
-        break # comment this line to undersrtand the fslow
+        break # comment this line to undersrtand the flow
 else:
     print("Loop finished without break")
 
