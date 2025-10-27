@@ -1,4 +1,7 @@
 # 1 Test methods in PyTest
+  # PyTest is a popular testing framework for Python that allows you to write simple and scalable test cases.
+  # Test methods in PyTest are functions that start with the prefix test_ and are used
+
 
 # To display the Test menthod Run icon,
 # 1. Make sure you have these extensions installed:
