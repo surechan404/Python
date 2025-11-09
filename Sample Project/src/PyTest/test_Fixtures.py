@@ -15,16 +15,42 @@ module	Once per module (file)
 package	Once per package (pytest 8+)
 session	Once per test session/execution """
 
-# To print content of all method use "pytest -s"
+# Notes:
+# 1. To print content of all method use "pytest -s"
+# 2. In terminal, move to the directory where the test file is located and run the command:
+# 3. pytest -s test_Fixtures.py
+# 4. yield keyword is used to define teardown code that runs after the test function completes.
+# 5. Create a new file conftest.py to share fixtures across multiple test files.
+# 6. Use @pytest.mark.skip to skip a test method.
+# 7. Use @pytest.mark.finalM to mark a test method (custom marker) to group/filter and run specific test methods.
 
 import pytest
 
 @pytest.fixture(scope="module")
 def preTest():
     print("This is module instance..") 
+    return "pass"
       
-def test_firstMethod(preTest):
-    print("This is First test..")
+@pytest.fixture(scope="function")
+def secondPreTest():
+    print("This is Second Pre-instance..") 
+    yield
+    print("This is Second Post-instance..")
 
-def test_secondMethod(preSetup):
+
+def test_firstMethod(preTest, secondPreTest):
+    print("This is First test..")
+    assert preTest == "pass"
+
+@pytest.mark.skip
+def test_secondMethod(preSetup, secondPreTest):
     print("This is Second test..")
+
+@pytest.mark.finalM
+def test_finalMethod():
+    print("This is Final method..")    
+
+@pytest.mark.finalM
+def test_finalMethod2():
+    print("This is Final method2..")    
+
