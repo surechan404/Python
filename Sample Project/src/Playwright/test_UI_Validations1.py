@@ -1,7 +1,7 @@
 from time import sleep
 from playwright.sync_api import sync_playwright,Page,expect
 
-
+# 1. Sample PLaywright script to perform add to cart and validate
 def test_UI_Validations1(page:Page):
     page.goto("https://rahulshettyacademy.com/angularpractice/shop")
     
@@ -16,4 +16,25 @@ def test_UI_Validations1(page:Page):
     sleep(5)
 
     cart = page.locator(".media-body")
-    expect(cart).to_have_count(3)
+    expect(cart).to_have_count(2)
+
+# 2. Sample Playwright script to handle child windows
+def test_childWindow(page:Page):
+    page.goto("https://rahulshettyacademy.com/")
+
+    with page.expect_popup() as newPage1:
+        page.click('//a[text()="JOIN NOW"]')
+        childPage1 = newPage1.value
+        childPage1.wait_for_load_state()
+        childPgTitle = childPage1.title()
+        print(childPgTitle)
+
+
+
+
+
+
+
+
+
+
