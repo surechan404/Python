@@ -18,7 +18,7 @@ session	Once per test session/execution """
 # Notes:
 # 1. To print content of all method use "pytest -s"
 # 2. In terminal, move to the directory where the test file is located and run the command:
-# 3. pytest -s test_Fixtures.py
+# 3. pytest test_Fixtures.py -s
 # 4. yield keyword is used to define teardown code that runs after the test function completes.
 # 5. Create a new file conftest.py to share fixtures across multiple test files.
 # 6. Use @pytest.mark.skip to skip a test method.
@@ -27,12 +27,12 @@ session	Once per test session/execution """
 import pytest
 
 @pytest.fixture(scope="module")
-def preTest():
+def test_preTest():
     print("This is module instance..") 
     return "pass"
       
 @pytest.fixture(scope="function")
-def secondPreTest():
+def test_secondPreTest():
     print("This is Second Pre-instance..") 
     yield
     print("This is Second Post-instance..")
