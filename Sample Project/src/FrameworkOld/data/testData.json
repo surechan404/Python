@@ -1,6 +1,6 @@
 {
  "userCredentials" : [
-         {
+    {
     "userMailId" : "fepex31820@okcdeals.com",
     "userPassword" : "Iamking@000"
      },
@@ -8,5 +8,8 @@
     "userMailId" : "xomadi7495@okcdeals.com",
     "userPassword" : "Iamking@000"
     } 
-]
-   }
+], 
+"baseURL" : "https://rahulshettyacademy.com"
+
+
+}

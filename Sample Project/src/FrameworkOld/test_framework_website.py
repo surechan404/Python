@@ -6,6 +6,7 @@ import test
 from pageObject.login import LoginPage
 from pageObject.dashboard import DashboardPage
 from utils.test_apiBase_fw import Test_API_Utils
+from ApiTesting.test_createOrder import Test_API_orderCreate
 import pytest
  
 # Test data file - JSON format
@@ -24,7 +25,7 @@ def test_e2e_web_api(playwright:Playwright, browserInitiate,  userCred, baseURL 
 
 # API calls from test_api_base.py file
     apiUtils = Test_API_Utils()
-    orderId = apiUtils.test_createOrder(playwright, userCred, baseURL)
+    orderId = test_createOrder(playwright, userCred, baseURL)
 
 # Web calls - Login > Orders View
     login = LoginPage(browserInitiate)

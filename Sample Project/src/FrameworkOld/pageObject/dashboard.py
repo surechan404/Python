@@ -1,7 +1,7 @@
 from pageObject.ordersHistory import OrdersHistory
 
 
-class DashboardPage:
+class  DashboardPage:
 
     def __init__(self, page):
         self.page = page

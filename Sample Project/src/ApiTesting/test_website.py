@@ -9,7 +9,9 @@ def test_e2e_web_api(playwright:Playwright):
 
 # API calls from test_api_base.py file
     apiUtils = Test_API_Utils()
-    orderId = apiUtils.test_createOrder(playwright)
+    userCred = {"email": "fepex31820@okcdeals.com", "password": "Iamking@000"}
+    baseURL = "https://rahulshettyacademy.com"
+    orderId = apiUtils.test_createOrder(playwright, userCred, baseURL)
     print(f'Order Id is{orderId}')
 
 # Web calls
